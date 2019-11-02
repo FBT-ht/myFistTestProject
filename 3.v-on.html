@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="box">
+        <!-- v-on指令   进行事件的绑定 方式1 -->
+        <button v-on:click="fun()">点我调用函数</button>
+        <!-- v-on指令   进行事件的绑定简写方式 方式2 推荐使用-->
+        <button @click="fun1()">点我继续调用函数</button>
+        <!-- 注： v-on: <==> @ -->
+    </div>
+    <script>
+        new Vue({
+            el: "#box",
+            data: {
+                
+            },
+            methods:{
+                fun(){
+                    console.log("夕阳无限好");
+                },
+                fun1(){
+                    console.log("只是近黄昏");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
