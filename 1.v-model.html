@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="box">
+         <!-- v-model指令进行数据双向（模型数据->视图/视图->模型数据）绑定    必须绑定在表单元素中-->
+        <input type="text" name="aa" v-model="text"/>
+        <input type="checkbox" name="bb" v-model="ck"/>
+    </div>
+    <script>
+    new Vue({
+        el:"#box",
+        data:{
+            text:"海婷儿",
+            ck:false
+        }
+    })
+    </script>
+</body>
+</html>
